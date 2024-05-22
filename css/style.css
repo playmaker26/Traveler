@@ -1,0 +1,1961 @@
+/*Start of global scope*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #add8e6;
+}
+
+/*End of global scope*/
+@media only screen and (max-width: 639px) {
+  /*Styling for header, logo, nav, hamburger, ul, li, a*/
+  header {
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
+
+  header figure a,
+  header figure a img {
+    width: 100%;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header nav .burger {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+
+  header nav .burger .line,
+  header nav .burger::after,
+  header nav .burger::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    margin: 3px 0;
+    transition: ease-out 300ms;
+  }
+
+  header nav .burger.open::before {
+    transform: rotate(-45deg) translate(-6px, 6px);
+    background-color: #a50105;
+  }
+
+  header nav .burger.open .line {
+    opacity: 0;
+  }
+
+  header nav .burger.open::after {
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: #a50105;
+  }
+
+  header nav ul {
+    position: absolute;
+    top: 30px;
+    right: -96px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 96px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style-type: none;
+    opacity: 0;
+    transition: all ease-in 300ms;
+    z-index: 1;
+  }
+
+  header nav ul li {
+    margin-bottom: 15px;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-family: Roboto;
+    text-align: center;
+  }
+  /*End of styling for header, logo, nav, hamburger, ul, li, a*/
+
+  /*Start of home section hero section styling, h1, p, call to action*/
+  main {
+    min-height: 100vh;
+    margin-bottom: -192px;
+  }
+
+  .push {
+    height: 192px;
+  }
+
+  main .home {
+    display: table;
+    background-image: url(../img/background-image.jpeg);
+    width: 100%;
+    height: calc(100vh - 30px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  main .home .hero-section {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 5px;
+    animation: slidein 1000ms 800ms ease-in forwards;
+    left: -100%;
+    opacity: 0;
+  }
+
+  main .home .hero-section h1,
+  main .home .hero-section p,
+  main .home .hero-section a {
+    font-family: Roboto;
+    color: #fff;
+  }
+
+  main .home .hero-section h1,
+  main .home .hero-section p {
+    text-shadow: 0 0 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+    margin-bottom: 5px;
+  }
+
+  main .home .hero-section h1 {
+    font-size: 24px;
+  }
+
+  main .home .hero-section p {
+    margin-bottom: 15px;
+  }
+
+  main .home .hero-section a {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #a50105;
+    border-radius: 5px;
+    padding: 10px;
+    width: 117px;
+    margin-top: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+  /*End of home section hero section styling, h1, p, call to action*/
+
+  /*Start of animation*/
+  @keyframes slidein {
+    0% {
+      left: -100%;
+      opacity: 0;
+    }
+
+    100% {
+      left: 0;
+      opacity: 1;
+    }
+  }
+  /*End of animation*/
+
+  /*Start of footer styling quick links, contact us, social media*/
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 192px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  footer div header {
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  footer .quick-links,
+  footer .contact-us,
+  footer .social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 320px;
+  }
+
+  footer .quick-links ul,
+  footer .contact-us ul,
+  footer .social-media ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 5px;
+  }
+
+  footer .quick-links ul li {
+    margin-right: 5px;
+  }
+
+  footer .quick-links ul li a,
+  footer .contact-us ul li {
+    font-size: 9px;
+    font-family: Roboto;
+    text-decoration: none;
+    color: #000;
+  }
+
+  footer .contact-us {
+    width: 195px;
+    height: 127px;
+  }
+
+  footer .contact-us ul {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  footer .contact-us ul li {
+    padding: 10px;
+  }
+
+  footer .social-media {
+    width: 104px;
+    height: 25px;
+  }
+
+  footer .social-media ul {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    gap: 13px;
+  }
+
+  footer .social-media ul li {
+    margin-right: 13px;
+  }
+
+  footer .social-media ul li svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  footer .social-media ul li .youtube path {
+    fill: #ff0000;
+  }
+
+  footer .social-media ul li .facebook path {
+    fill: #1877f2;
+  }
+
+  footer .social-media ul li .twitter path {
+    fill: #1da1f2;
+  }
+
+  footer div header h2 {
+    color: #000;
+    font-size: 12px;
+    font-family: Roboto;
+  }
+  /*End of footer styling quick links, contact us, social media*/
+
+  /*Start of destination page styling and interactive map*/
+  main .destination .country-info {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  main .destination .country-info #name {
+    position: absolute;
+    background-color: #fff;
+    width: fit-content;
+    opacity: 0;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Roboto;
+  }
+
+  main .destination .country-info #time {
+    background-color: #fff;
+    width: fit-content;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Roboto;
+  }
+
+  main .destination .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  main .destination .form-container .btn-side-form {
+    order: 1;
+    rotate: 90deg;
+    width: 57px;
+    height: 34px;
+    position: absolute;
+    left: -14px;
+    top: 180px;
+    font-family: Roboto;
+    font-size: 12px;
+    color: #000;
+    transition: all ease 300ms;
+  }
+
+  main .destination .form-container form {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 228px;
+    height: 166px;
+    position: absolute;
+    left: -228px;
+    top: 104px;
+    opacity: 0;
+    transition: all ease-in 300ms;
+  }
+
+  main .destination .form-container form .search {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-self: flex-start;
+  }
+
+  main .destination .form-container form .search .search-icon {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border: none;
+    appearance: none;
+  }
+
+  main .destination .form-container form .search .search-input {
+    width: 195px;
+    height: 35px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #000;
+  }
+
+  main .destination .form-container form .information {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 1.25em;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  main .destination .form-container form .information .img-flag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+  }
+
+  main .destination .form-container form .information .img-flag .country-flag {
+    display: block;
+    width: 45%;
+    min-width: 7.5em;
+    margin: 0 auto;
+  }
+
+  main .destination .form-container form .information .img-flag .country-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main
+    .destination
+    .form-container
+    form
+    .information
+    .img-flag
+    .country-info
+    .country-name-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main
+    .destination
+    .form-container
+    form
+    .information
+    .img-flag
+    .country-info
+    .country-name-header
+    .country-name {
+    font-size: 24px;
+    color: #000;
+    font-family: Roboto;
+    font-weight: bold;
+  }
+
+  main
+    .destination
+    .form-container
+    form
+    .information
+    .img-flag
+    .country-info
+    ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+    list-style: none;
+  }
+
+  main
+    .destination
+    .form-container
+    form
+    .information
+    .img-flag
+    .country-info
+    ul
+    li {
+    padding: 5px;
+    font-size: 14px;
+    font-family: lato;
+    color: #000;
+  }
+  /*End of destination page styling and interactive map*/
+
+  /*Start of about page*/
+  main .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  main .about .about-us-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  main .about .about-us-container figure,
+  main .about .about-us-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    background-color: #fff;
+    margin: 15px 0;
+  }
+
+  main .about .about-us-container figure figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  main .about .about-us-container figure figcaption header,
+  main .about .about-us-container div header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  main .about .about-us-container figure figcaption ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+  }
+
+  main .about .about-us-container figure figcaption ul li {
+    padding: 10px;
+    font-size: 16px;
+    font-family: lato;
+    color: #000;
+  }
+
+  main .about .about-us-container figure figcaption p,
+  main .about .about-us-container div p {
+    padding: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000;
+    font-family: lato;
+  }
+
+  main .about .about-us-container div p a {
+    color: #0000ff;
+  }
+
+  main .about .about-us-container figure figcaption header h2,
+  main .about .about-us-container div header h2 {
+    font-size: 24px;
+    font-family: Roboto;
+    font-weight: 500;
+    color: #000;
+  }
+
+  main .about .about-us-container figure img {
+    display: block;
+    width: 100%;
+  }
+  /*End of about page*/
+
+  /*Start of contact page*/
+  main .contact,
+  main .contact .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  main .contact .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  main .contact .header-container nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+  }
+
+  main .contact .header-container nav ul li {
+    padding: 10px;
+    font-family: lato;
+  }
+
+  main .contact .header-container header {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 41px;
+  }
+
+  main .contact .header-container header h2 {
+    font-size: 24px;
+    font-family: Roboto;
+    font-weight: 500;
+    color: #000;
+  }
+
+  main .contact .contact-container {
+    width: 100%;
+  }
+
+  main .contact .contact-container form,
+  main .contact .contact-container form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  main .contact .contact-container form div label {
+    font-size: 16px;
+    font-family: Roboto;
+  }
+
+  main .contact .contact-container form div input,
+  main .contact .contact-container form div textarea {
+    border: 1px solid #000;
+    padding: 10px;
+  }
+
+  main .contact .contact-container form div textarea {
+    height: 139px;
+    resize: none;
+  }
+
+  main .contact .contact-container form button {
+    align-self: flex-start;
+    outline: none;
+    border: none;
+    width: 71px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    background-color: #000;
+    font-family: Roboto;
+  }
+  /*End of contact page*/
+
+  /*Start of FAQ page*/
+  main .faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .faq .faq-container {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+  }
+
+  main .faq .faq-container header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  main .faq .faq-container header h2 {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Roboto;
+    color: #000;
+  }
+
+  main .faq .faq-container .questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  main .faq .faq-container .questions div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main .faq .faq-container .questions div header {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  main .faq .faq-container .questions div header h3 {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #000;
+  }
+
+  main .faq .faq-container .questions div p {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: lato;
+    color: #000;
+  }
+  /*End of FAQ page*/
+
+  /*Start of booking form*/
+  main .book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px auto;
+  }
+
+  main .book form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    margin: 15px 0;
+  }
+
+  main .book form .book-container-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+  }
+
+  main .book form .book-container-header header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  main .book form .book-container-header p {
+    color: #000;
+    font-size: 16px;
+    font-family: Lato;
+    padding: 10px;
+  }
+
+  main .book form .book-container-header header h2 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Roboto;
+  }
+
+  main .book form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  main .book form div label {
+    font-size: 16px;
+    font-family: Lato;
+    color: #000;
+  }
+
+  main .book form .payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .book form .payment .payment-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .book form div input {
+    border: 1px solid #000;
+    padding: 10px;
+    width: 100%;
+  }
+
+  main .book form .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main .book form .card-info label {
+    font-size: 16px;
+    font-family: Lato;
+    color: #000;
+  }
+
+  main .book form .card-info input {
+    border: 1px solid #000;
+    padding: 10px;
+    width: 100%;
+  }
+
+  main .book form .price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  main .book form .price header h3 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Roboto;
+    color: #000;
+  }
+
+  main .book form .price p {
+    font-size: 22px;
+    color: #000;
+    font-family: lato;
+    font-weight: bold;
+  }
+
+  main .book form button {
+    align-self: flex-start;
+    width: 90px;
+    height: 36px;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    appearance: none;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  /*End of booking form*/
+}
+
+@media only screen and (min-width: 515px) {
+  main {
+    min-height: 100vh;
+    margin-bottom: -127px;
+  }
+
+  .push {
+    height: 127px;
+  }
+  /*Start of footer styling*/
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 127px;
+    background-color: #fff;
+    margin-top: auto;
+    gap: 0;
+  }
+  /*End of footer styling*/
+}
+
+@media only screen and (min-width: 640px) {
+  /*Styling for header, logo, nav, hamburger, ul, li, a*/
+  header {
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
+
+  header figure a,
+  header figure a img {
+    width: 100%;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header nav .burger {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+
+  header nav .burger .line,
+  header nav .burger::after,
+  header nav .burger::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    margin: 3px 0;
+    transition: ease-out 300ms;
+  }
+
+  header nav .burger.open::before {
+    transform: rotate(-45deg) translate(-6px, 6px);
+    background-color: #a50105;
+  }
+
+  header nav .burger.open .line {
+    opacity: 0;
+  }
+
+  header nav .burger.open::after {
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: #a50105;
+  }
+
+  header nav ul {
+    position: absolute;
+    top: 30px;
+    right: -96px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 96px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    list-style-type: none;
+    opacity: 0;
+    transition: all ease-in 300ms;
+    z-index: 1;
+  }
+
+  header nav ul li {
+    margin-bottom: 15px;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-family: Roboto;
+  }
+  /*End of styling for header, logo, nav, hamburger, ul, li, a*/
+
+  /*Start of home section hero section styling, h1, p, call to action*/
+  main .home {
+    display: table;
+    background-image: url(../img/background-image.jpeg);
+    width: 100%;
+    height: calc(100vh - 30px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  main .home .hero-section {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 5px;
+    animation: slidein 1000ms 800ms ease-in forwards;
+    left: -100%;
+    opacity: 0;
+  }
+
+  main .home .hero-section h1,
+  main .home .hero-section p,
+  main .home .hero-section a {
+    font-family: Roboto;
+    color: #fff;
+  }
+
+  main .home .hero-section h1,
+  main .home .hero-section p {
+    text-shadow: 0 0 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+    margin-bottom: 5px;
+  }
+
+  main .home .hero-section h1 {
+    font-size: 26px;
+  }
+
+  main .home .hero-section p {
+    margin-bottom: 15px;
+  }
+
+  main .home .hero-section a {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #a50105;
+    border-radius: 5px;
+    padding: 10px;
+    width: 117px;
+    margin-top: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+  /*End of home section hero section styling, h1, p, call to action*/
+
+  /*Start of animation*/
+  @keyframes slidein {
+    0% {
+      left: -100%;
+      opacity: 0;
+    }
+
+    100% {
+      left: 0;
+      opacity: 1;
+    }
+  }
+  /*End of animation*/
+
+  /*Start of footer styling quick links, contact us, social media*/
+  footer div header {
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  footer .quick-links,
+  footer .contact-us,
+  footer .social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 320px;
+  }
+
+  footer .quick-links ul,
+  footer .contact-us ul,
+  footer .social-media ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 5px;
+  }
+
+  footer .quick-links ul li {
+    margin-right: 5px;
+  }
+
+  footer .quick-links ul li a,
+  footer .contact-us ul li {
+    font-size: 9px;
+    font-family: Roboto;
+    text-decoration: none;
+    color: #000;
+  }
+
+  footer .contact-us {
+    width: 195px;
+    height: 127px;
+  }
+
+  footer .contact-us ul {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  footer .contact-us ul li {
+    padding: 10px;
+  }
+
+  footer .social-media {
+    width: 101px;
+    height: 25px;
+  }
+
+  footer .social-media ul {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  footer .social-media ul li {
+    margin-right: 10px;
+  }
+
+  footer .social-media ul li svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  footer .social-media ul li .youtube path {
+    fill: #ff0000;
+  }
+
+  footer .social-media ul li .facebook path {
+    fill: #1877f2;
+  }
+
+  footer .social-media ul li .twitter path {
+    fill: #1da1f2;
+  }
+
+  footer div header h2 {
+    color: #000;
+    font-size: 12px;
+    font-family: Roboto;
+  }
+  /*End of footer styling quick links, contact us, social media*/
+
+  /*Start of destination page styling and interactive map*/
+  main .destination .country-info {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+  }
+  main .destination .country-info #name {
+    position: absolute;
+    background-color: #fff;
+    width: fit-content;
+    opacity: 0;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Roboto;
+  }
+
+  main .destination .country-info #time {
+    background-color: #fff;
+    width: fit-content;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Roboto;
+  }
+
+  main .destination figure svg path {
+    cursor: pointer;
+  }
+
+  main .destination .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  main .destination .form-container .btn-side-form {
+    order: 1;
+    rotate: 90deg;
+    width: 57px;
+    height: 34px;
+    position: absolute;
+    left: -14px;
+    top: 180px;
+    font-family: Roboto;
+    font-size: 12px;
+    color: #000;
+    transition: all ease 300ms;
+  }
+
+  main .destination .form-container form {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 228px;
+    height: 166px;
+    position: absolute;
+    left: -228px;
+    top: 104px;
+    opacity: 0;
+    transition: all ease-in 300ms;
+  }
+
+  main .destination .form-container form .search {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-self: flex-start;
+  }
+
+  main .destination .form-container form .search .search-icon {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border: none;
+    appearance: none;
+  }
+
+  main .destination .form-container form .search .search-input {
+    width: 195px;
+    height: 35px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #000;
+  }
+
+  main .destination .form-container form .information {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 1.25em;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  main .destination .form-container form .information .img-flag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+  }
+
+  main .destination .form-container form .information .img-flag .country-flag {
+    display: block;
+    width: 45%;
+    min-width: 7.5em;
+    margin: 0 auto;
+  }
+
+  main .destination .form-container form .information .img-flag .country-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main
+    .destination
+    .form-container
+    form
+    .information
+    .img-flag
+    .country-info
+    .country-name-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main
+    .destination
+    .form-container
+    form
+    .information
+    .img-flag
+    .country-info
+    .country-name-header
+    .country-name {
+    font-size: 24px;
+    color: #000;
+    font-family: Roboto;
+    font-weight: bold;
+  }
+
+  main
+    .destination
+    .form-container
+    form
+    .information
+    .img-flag
+    .country-info
+    ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+    list-style: none;
+  }
+
+  main
+    .destination
+    .form-container
+    form
+    .information
+    .img-flag
+    .country-info
+    ul
+    li {
+    padding: 5px;
+    font-size: 14px;
+    font-family: lato;
+    color: #000;
+  }
+  /*End of destination page styling and interactive map*/
+
+  /*Start of about page*/
+
+  main .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  main .about .about-us-container {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  main .about .about-us-container figure,
+  main .about .about-us-container div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    background-color: #fff;
+    margin: 15px 0;
+  }
+
+  main .about .about-us-container figure figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  main .about .about-us-container figure figcaption header,
+  main .about .about-us-container div header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  main .about .about-us-container figure figcaption ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+  }
+
+  main .about .about-us-container figure figcaption ul li {
+    padding: 10px;
+    font-size: 16px;
+    font-family: lato;
+    color: #000;
+  }
+
+  main .about .about-us-container figure figcaption p,
+  main .about .about-us-container div p {
+    padding: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000;
+    font-family: lato;
+  }
+
+  main .about .about-us-container div p a {
+    color: #0000ff;
+  }
+
+  main .about .about-us-container figure figcaption header h2,
+  main .about .about-us-container div header h2 {
+    font-size: 24px;
+    font-family: Roboto;
+    font-weight: 500;
+    color: #000;
+  }
+
+  main .about .about-us-container figure img {
+    display: block;
+    width: 100%;
+  }
+  /*End of about page*/
+
+  /*Start of contact page*/
+  main .contact,
+  main .contact .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  main .contact .header-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    background-color: #fff;
+    width: 560px;
+  }
+
+  main .contact .header-container nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+  }
+
+  main .contact .header-container nav ul li {
+    padding: 10px;
+    font-family: lato;
+  }
+
+  main .contact .header-container header {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 41px;
+  }
+
+  main .contact .header-container header h2 {
+    font-size: 24px;
+    font-family: Roboto;
+    font-weight: 500;
+    color: #000;
+  }
+
+  main .contact .contact-container {
+    width: 560px;
+  }
+
+  main .contact .contact-container form,
+  main .contact .contact-container form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  main .contact .contact-container form div label {
+    font-size: 16px;
+    font-family: Roboto;
+  }
+
+  main .contact .contact-container form div input,
+  main .contact .contact-container form div textarea {
+    border: 1px solid #000;
+    padding: 10px;
+  }
+
+  main .contact .contact-container form div textarea {
+    height: 139px;
+    resize: none;
+  }
+
+  main .contact .contact-container form button {
+    align-self: flex-start;
+    outline: none;
+    border: none;
+    width: 71px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    background-color: #000;
+    font-family: Roboto;
+  }
+
+  /*End of contact page*/
+
+  /*Start of FAQ page*/
+  main .faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .faq .faq-container {
+    background-color: #fff;
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+  }
+
+  main .faq .faq-container header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  main .faq .faq-container header h2 {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Roboto;
+    color: #000;
+  }
+
+  main .faq .faq-container .questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  main .faq .faq-container .questions div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  main .faq .faq-container .questions div header {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  main .faq .faq-container .questions div header h3 {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #000;
+  }
+
+  main .faq .faq-container .questions div p {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: lato;
+    color: #000;
+  }
+  /*End of FAQ page*/
+
+  /*Start of booking form*/
+  main .book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 560px;
+    margin: 15px auto;
+  }
+
+  main .book form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    margin: 15px 0;
+  }
+
+  main .book form .book-container-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+  }
+
+  main .book form .book-container-header header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  main .book form .book-container-header p {
+    color: #000;
+    font-size: 16px;
+    font-family: Lato;
+    padding: 10px;
+  }
+
+  main .book form .book-container-header header h2 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Roboto;
+  }
+
+  main .book form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  main .book form div label {
+    font-size: 16px;
+    font-family: Lato;
+    color: #000;
+  }
+
+  main .book form .payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .book form .payment .payment-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .book form div input {
+    border: 1px solid #000;
+    padding: 10px;
+    width: 100%;
+  }
+
+  main .book form .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main .book form .card-info label {
+    font-size: 16px;
+    font-family: Lato;
+    color: #000;
+  }
+
+  main .book form .card-info input {
+    border: 1px solid #000;
+    padding: 10px;
+    width: 100%;
+  }
+
+  main .book form .price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  main .book form .price header h3 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Roboto;
+    color: #000;
+  }
+
+  main .book form .price p {
+    font-size: 22px;
+    color: #000;
+    font-family: lato;
+    font-weight: bold;
+  }
+
+  main .book form button {
+    align-self: flex-start;
+    width: 90px;
+    height: 36px;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    appearance: none;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  /*End of booking form*/
+}
+
+@media only screen and (min-width: 768px) {
+  /*Start of styling h1, p*/
+  main .home .hero-section h1,
+  main .home .hero-section p {
+    margin-bottom: 2px;
+  }
+
+  main .home .hero-section h1 {
+    font-size: 28px;
+  }
+
+  main .home .hero-section p {
+    margin-bottom: 17px;
+  }
+  /*End of styling h1, p*/
+
+  /*Start of about us page*/
+  main .about .about-us-container {
+    width: 660px;
+  }
+  /*End of about us page*/
+
+  /*Start of contact page*/
+  main .contact .header-container {
+    width: 708px;
+  }
+
+  main .contact .header-container nav ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  main .contact .header-container nav ul li {
+    font-size: 13px;
+  }
+
+  main .contact .contact-container {
+    width: 708px;
+  }
+  /*End of contact page*/
+
+  /*Start of FAQ page*/
+  main .faq .faq-container {
+    width: 660px;
+  }
+  /*End of FAQ page*/
+
+  /*Start of booking form*/
+  main .book {
+    width: 660px;
+  }
+  /*End of booking form*/
+}
+
+@media only screen and (min-width: 992px) {
+  /*Styling for header, logo, nav, hamburger, ul, li, a, hover effects, active links indicator*/
+  header {
+    height: 36px;
+  }
+
+  header figure {
+    width: 120px;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 373px;
+  }
+
+  header nav .burger {
+    display: none;
+  }
+
+  header nav ul {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 36px;
+    max-width: 373px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    background-color: transparent;
+  }
+
+  header nav ul li {
+    margin-bottom: 0px;
+    margin-right: 15px;
+  }
+
+  header nav ul li a {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  header nav ul li a:hover {
+    color: #05014a;
+    font-weight: 500;
+    transition: all ease-in 300ms;
+  }
+
+  header nav ul li a.activeLink {
+    color: #a50105;
+    font-weight: 800;
+  }
+  /*End of styling for header, logo, nav, hamburger, ul, li, a, hover effects, active link indicator*/
+
+  /*Start of styling h1, call to acton hover effect*/
+  main {
+    min-height: 100vh;
+    margin-bottom: -76px;
+  }
+
+  .push {
+    height: 76px;
+  }
+  main .home .hero-section h1 {
+    font-size: 30px;
+  }
+
+  main .home .hero-section a:hover {
+    border: 1px solid #000;
+    transition: all ease-in 300ms;
+  }
+
+  /*End of styling h1, call to action hover effect*/
+
+  /*Start of footer styling quick links, contact us, social media*/
+  footer {
+    height: 76px;
+    overflow: hidden;
+  }
+
+  footer .contact-us ul {
+    flex-direction: row;
+    width: 483px;
+  }
+  /*End of footer styling quick links, contact us, social media*/
+
+  /*Start of destination page styling and interactive map*/
+  main .destination figure svg path {
+    cursor: pointer;
+  }
+  /*End of destination page styling and interactive map*/
+
+  /*Start of about us page*/
+  main .about .about-us-container {
+    width: 760px;
+  }
+
+  main .about .about-us-container figure figcaption p,
+  main .about .about-us-container div p {
+    font-size: 14px;
+  }
+  /*End of about us page*/
+
+  /*Start of contact page*/
+  main .contact .contact-container,
+  main .contact .header-container {
+    width: 808px;
+  }
+
+  main .contact .contact-container form button {
+    cursor: pointer;
+  }
+  /*End of contact page*/
+
+  /*Start of FAQ page*/
+  main .faq .faq-container {
+    width: 760px;
+  }
+  /*End of FAQ page*/
+
+  /*Start of booking form*/
+  main .book {
+    width: 760px;
+  }
+  /*End of booking form*/
+}
+
+@media only screen and (min-width: 1024px) {
+  /*Start of styling h1*/
+  main .home .hero-section h1 {
+    font-size: 32px;
+  }
+  /*End of styling h1*/
+
+  /*Start of about us page*/
+  main .about .about-us-container {
+    width: 860px;
+  }
+  /*End of about us page*/
+
+  /*Start of contact page*/
+  main .contact .contact-container,
+  main .contact .header-container {
+    width: 908px;
+  }
+  /*End of contact page*/
+
+  /*Start of FAQ page*/
+  main .faq .faq-container {
+    width: 860px;
+  }
+  /*End of FAQ page*/
+
+  main .book {
+    width: 860px;
+  }
+  /*End of booking form*/
+}
+
+@media only screen and (min-width: 1536px) {
+  /*Start of styling h1*/
+  main .home .hero-section h1 {
+    font-size: 36px;
+  }
+  /*End of styling h1*/
+
+  /*Start of about us page*/
+  main .about .about-us-container {
+    width: 960px;
+  }
+  /*End of about us page*/
+
+  /*Start of contact page*/
+  main .contact .contact-container,
+  main .contact .header-container {
+    width: 1008px;
+  }
+  /*End of contact page*/
+
+  /*Start of FAQ page*/
+  main .faq .faq-container {
+    width: 960px;
+  }
+  /*End of FAQ page*/
+
+  main .book {
+    width: 960px;
+  }
+  /*End of booking form*/
+}
